@@ -1,0 +1,118 @@
+/*-----------------------------------
+
+	common_base
+
+-----------------------------------*/
+.html_common {
+    overflow-y: auto;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+	overflow-x: hidden;
+}
+.body_common {
+	font-family: "Noto Sans JP","メイリオ","Meiryo",verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+	font-size: 14px;
+	color: #333434;
+    line-height: 1.8em;
+	letter-spacing: 0.03rem;
+	font-weight: 400;
+	background: #fff;
+	margin: 0 !important;
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 999;
+}
+::selection {
+	background: #585858;
+	color: #fff;
+}
+/* Firefox */
+::-moz-selection {
+	background: #585858;
+	color: #fff;
+}
+.img_common {
+    max-width: 100%;
+    height: auto;
+}
+.a_common {
+    &,
+    &:link,
+    &:visited {
+        color:#333434;
+        text-decoration:none;
+        cursor: pointer;
+    }
+    &:hover {
+        color:#8f8f8f;
+        text-decoration:none;
+    }
+    &,
+    & .img_common {
+        transition : 0.2s ;
+        -webkit-transition : 0.2s ;
+        -moz-transition    : 0.2s ;
+        -o-transition      : 0.2s ;
+        -ms-transition     : 0.2s ;
+    }
+    &:hover .img_common {
+        opacity: 0.7;
+  }
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* device */
+.sp {
+	display:none;
+    @media (max-width: 640px) {
+        display:block;
+    }
+}
+.pc {
+	display:block;
+    @media (max-width: 640px) {
+        display: none;
+    }
+}
+
+/* contents */
+.contents_inner{
+	width: 1000px;
+	margin: 0 auto;
+    @media (max-width: 1030px) {
+        width: 95%;
+		margin: 0 auto;
+    }
+}
+
+/*-----------------------------------
+
+	clearfix
+
+-----------------------------------*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}

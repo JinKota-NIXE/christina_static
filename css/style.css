@@ -1,0 +1,279 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+/* ===================================================
+
+File name: reset.css
+Description: ファイルの説明
+Applied pages: 全ページ
+Date: 
+Copyright: 
+
+=====================================================*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1em;
+  font-size: 84%;
+}
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-size: small;
+  font-family: "メイリオ","Meiryo",verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+  line-height: 1.5em;
+}
+
+img {
+  vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  zoom: 1;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+a.mouse-over:hover img {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -ms-filter: "alpha( opacity=80 )";
+}
+
+.center {
+  text-align: center;
+}
+
+/*-----------------------------------
+
+	common_base
+
+-----------------------------------*/
+.html_common {
+  overflow-y: auto;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+.body_common {
+  font-family: "Noto Sans JP","メイリオ","Meiryo",verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+  font-size: 14px;
+  color: #333434;
+  line-height: 1.8em;
+  letter-spacing: 0.03rem;
+  font-weight: 400;
+  background: #fff;
+  margin: 0 !important;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 999;
+}
+
+::selection {
+  background: #585858;
+  color: #fff;
+}
+
+/* Firefox */
+::-moz-selection {
+  background: #585858;
+  color: #fff;
+}
+
+.img_common {
+  max-width: 100%;
+  height: auto;
+}
+
+.a_common, .a_common:link, .a_common:visited {
+  color: #333434;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.a_common:hover {
+  color: #8f8f8f;
+  text-decoration: none;
+}
+
+.a_common,
+.a_common .img_common {
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+}
+
+.a_common:hover .img_common {
+  opacity: 0.7;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* device */
+.sp {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .sp {
+    display: block;
+  }
+}
+
+.pc {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .pc {
+    display: none;
+  }
+}
+
+/* contents */
+.contents_inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1030px) {
+  .contents_inner {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+/*-----------------------------------
+
+	clearfix
+
+-----------------------------------*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/*-----------------------------------
+
+	test
+
+-----------------------------------*/
+.test .box_test {
+  background-color: #bbbbbb;
+}
+
+@media (max-width: 640px) {
+  .test .box_test .text_test {
+    color: #af2121;
+  }
+}
